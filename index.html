@@ -90,7 +90,7 @@
     <div class='map-overlay' id='features'>
         <h2>Washington State Fully COVID-19 Vaccination Data</h2>
         <div id='text-description'>
-            <p>Hover over a county!!!</p>
+            <p><em>Hover over a county!!!</em></p>
         </div>
     </div>
     <div class='map-overlay' id='legend'></div>
@@ -191,8 +191,8 @@
                     layers: ['county_data_layer']
                 });
                 document.getElementById('text-description').innerHTML = county.length ?
-                    `<h3><em><b>County:&nbsp</b></em>${county[0].properties.name}</h3><p><strong><em>${county[0].properties.fullyVaxPer10k}</strong> people per 10K</em></p>` :
-                    `<p>Hover over a county!!!</p>`;
+                    `<h3><b>County:&nbsp</b><em>${county[0].properties.name}</em></h3><p><strong>Population:&nbsp<em>${county[0].properties.fullyVaxPer10k}</strong>people per 10K</em></p>` :
+                    `<p><em>Hover over a county!!!</em></p>`;
             });
         }
 
